@@ -200,6 +200,16 @@ void list_users(HKEY hKey, int usec, const char * timestamp, int ID, const char 
 // Installed programs inventory for BSD based systems
 void sys_packages_bsd(int queue_fd, const char* LOCATION);
 
+/**
+ * @brief This function separate vendor's name from macOS package's name, if it includes the vendor.
+ * 
+ * @param [in] source_package The name of the package that may include the vendor's name.
+ * @param [out] vendor_name The vendor's name
+ * @param [out] package_name The package's name without the vendor's name
+ * @return int 0 if it does not need to separate them , 1 if it needs to separate them.
+ */
+int check_vendor_package_mac(const char * source_package, char ** vendor_name, char ** package_name);
+
 #endif
 
 #ifdef __MACH__
