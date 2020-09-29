@@ -14,6 +14,7 @@
 const char *task_manager_json_keys[] = {
     // Request
     [WM_TASK_ORIGIN] = "origin",
+    [WM_TASK_NAME] = "name",
     [WM_TASK_MODULE] = "module",
     [WM_TASK_COMMAND] = "command",
     [WM_TASK_PARAMETERS] = "parameters",
@@ -46,9 +47,11 @@ const char *task_manager_modules_list[] = {
 };
 
 const char *task_statuses[] = {
+    [WM_TASK_PENDING] = WM_TASK_STATUS_PENDING,
     [WM_TASK_IN_PROGRESS] = WM_TASK_STATUS_IN_PROGRESS,
     [WM_TASK_DONE] = WM_TASK_STATUS_DONE,
     [WM_TASK_FAILED] = WM_TASK_STATUS_FAILED,
+    [WM_TASK_CANCELLED] = WM_TASK_STATUS_CANCELLED,
     [WM_TASK_TIMEOUT] = WM_TASK_STATUS_TIMEOUT,
     [WM_TASK_LEGACY] = WM_TASK_STATUS_LEGACY
 };
